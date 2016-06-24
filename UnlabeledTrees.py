@@ -36,7 +36,5 @@ def unlabeledTrees(vertices):
         print degreeSequence
         
         degreeSequence[:] = []
-
-        
+      
 unlabeledTrees(7)
-        
