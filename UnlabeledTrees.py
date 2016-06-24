@@ -16,8 +16,6 @@ def unlabeledTrees(vertices):
     for highestDegree in degreeRange:
         
         degreeSequence.append(highestDegree)
-        
-        leaves(highestDegree,degreeSequence)
 
         degreeSum = 2*(numberOfEdges)
         
@@ -25,11 +23,19 @@ def unlabeledTrees(vertices):
         
         degreeSum -= k
         
-        unknownVertices = vertices - (highestDegree - 1)
+        if(degreeSum != 0):
+            unknownVertices = vertices - (highestDegree + 1)
         
+            remainingDeg = degreeSum // unknownVertices
+            
+            for i in range(unknownVertices + 1):
+                degreeSequence.append(remainingDeg)
+        
+        leaves(highestDegree,degreeSequence)
         print degreeSequence
         
         degreeSequence[:] = []
- 
-unlabeledTrees(7)
+
+        
+unlabeledTrees(6)
         
