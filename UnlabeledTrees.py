@@ -35,5 +35,19 @@ def unlabeledTrees(vertices):
         print degreeSequence
         
         degreeSequence[:] = []
+        
+def subset_sum(numbers, target, partial=[]):
+    s = sum(partial)
+    
+    # check if the partial sum is equals to target
+    if s == target: 
+        print partial
+    if s >= target:
+        return  # if we reach the number why bother to continue
+
+    for i in range(len(numbers)):
+        n = numbers[i]
+        remaining = numbers[i+1:]
+        subset_sum(remaining, target, partial + [n]) 
       
 unlabeledTrees(7)
