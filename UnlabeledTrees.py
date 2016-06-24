@@ -32,6 +32,8 @@ def unlabeledTrees(vertices):
         
         leaves(highestDegree,degreeSequence)
         
+        subset_sum(range(1,highestDegree), degreeSum)
+        
         print degreeSequence
         
         degreeSequence[:] = []
