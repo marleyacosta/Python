@@ -11,8 +11,6 @@ def unlabeledTrees(vertices):
     
     degreeSequence = []
     
-    listOfSequences = []
-    
     for highestDegree in degreeRange:
         
         degreeSequence.append(highestDegree)
