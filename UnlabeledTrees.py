@@ -1,3 +1,4 @@
+# This program finds all the degree sequences of n vertices tree.
 
 def leaves(degree, l):
     for i in range(degree):
