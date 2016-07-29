@@ -1,4 +1,5 @@
 # This program finds all the degree sequences of n vertices tree.
+# Refer to http://oeis.org/A000055/list
 
 def leaves(degree, l):
     for i in range(degree):
@@ -51,5 +52,7 @@ def subset_sum(numbers, target, partial=[]):
         n = numbers[i]
         remaining = numbers[i+1:]
         subset_sum(remaining, target, partial + [n]) 
-      
-unlabeledTrees(7)
+        
+for i in range(8):
+    unlabeledTrees(i)
+
